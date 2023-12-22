@@ -1,1 +1,1 @@
-!(The Diamond Aramada Mod)[/damod-logo.png]
+![The Diamond Armada Mod](/tdam-logo.png)
