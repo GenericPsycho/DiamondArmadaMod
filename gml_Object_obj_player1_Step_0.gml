@@ -11,7 +11,7 @@ if (room == custom_lvl_room)
         cam_width = instance_place(x, y, par_camera_editor).width
         cam_height = instance_place(x, y, par_camera_editor).height
         with (obj_camera)
-            bound_camera = 1
+            bound_camera = true
     }
     else
     {
@@ -20,13 +20,8 @@ if (room == custom_lvl_room)
         cam_height = 0
         instance_activate_all()
         with (obj_camera)
-            bound_camera = 0
+            bound_camera = false
     }
 }
 scr_getinput()
 event_inherited()
-if (sprite_index == spr_playerN_levelcomplete && paletteselect == 17)
-{
-    if (!instance_exists(obj_peddito))
-        instance_create_unique(0, 0, obj_peddito)
-}

@@ -3,13 +3,13 @@ if (room == rm_editor)
     visible = 0
     return;
 }
-visible = 0
+visible = false
 x = -10000
 y = -10000
 scr_getinput2()
 if (!global.coop)
 {
-    obj_player1.spotlight = 1
+    obj_player1.spotlight = true
     x = -1000
     y = -1000
     state = states.titlescreen
@@ -26,12 +26,7 @@ if ((!visible) && state == states.comingoutdoor)
     image_index = 0
     if (coopdelay == 50)
     {
-        visible = 1
+        visible = true
         coopdelay = 0
     }
-}
-if (sprite_index == spr_playerN_levelcomplete && paletteselect == 17)
-{
-    if (!instance_exists(obj_peddito))
-        instance_create_unique(0, 0, obj_peddito)
 }
